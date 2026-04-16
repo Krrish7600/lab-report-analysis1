@@ -2,19 +2,29 @@ def ai_extract_parameters(report_text, client):
     prompt = f"""
 You are a medical data extractor.
 
-Extract all lab parameters and their values from the report below.
+Extract ALL lab parameters and their numeric values from the report below.
 
-Return ONLY in JSON format like this:
+IMPORTANT RULES:
+- For blood pressure, extract as TWO separate keys: "systolic" and "diastolic"
+  e.g. BP 140/90 → {{"systolic": 140, "diastolic": 90}}
+- For cholesterol, extract: "total cholesterol", "ldl", "hdl", "triglycerides" separately
+- Use lowercase keys with spaces (not underscores)
+- Extract EVERY parameter you can find — do not skip any
+- Values must be numeric only (no units in the value)
+- Return ONLY valid JSON, no explanation
+
+Example output:
 {{
-  "hemoglobin": 10,
-  "wbc": 12000,
-  "platelets": 150000
+  "hemoglobin": 10.5,
+  "total cholesterol": 240,
+  "ldl": 160,
+  "hdl": 38,
+  "triglycerides": 200,
+  "systolic": 145,
+  "diastolic": 95,
+  "fasting glucose": 110,
+  "creatinine": 1.4
 }}
-
-Rules:
-- Extract as many parameters as possible
-- Use lowercase keys
-- No explanation, only JSON
 
 Report:
 {report_text}
