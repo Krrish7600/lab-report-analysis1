@@ -1,6 +1,23 @@
+<<<<<<< HEAD
 __pycache__/
 *.pyc
 .env
 _tmp*
 *.db
 *.json
+=======
+.env
+
+# SQLite database (contains user data)
+*.db
+frontend/users.db
+
+# Temp files from uploads
+frontend/_tmp_img
+frontend/_tmp.pdf
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+>>>>>>> dba419a332508878fc47ed5bddc846ff792eabe6
