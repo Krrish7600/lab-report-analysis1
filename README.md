@@ -13,9 +13,9 @@
 ## 🚀 Badges
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/AI-Groq_API-purple?style=for-the-badge" />
+  
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
 </p>
 
