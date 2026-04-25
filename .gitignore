@@ -6,7 +6,10 @@ frontend/users.db
 
 # Temp files from uploads
 frontend/_tmp_img
+frontend/_tmp_img_*
 frontend/_tmp.pdf
+frontend/_tmp_*.pdf
+frontend/page_modules/_tmp*
 
 # Python cache
 __pycache__/
