@@ -31,7 +31,7 @@ Report:
 """
 
     response = client.chat.completions.create(
-        model="openai/gpt-oss-120b",
+        model="openai/gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
         temperature=0
     )
